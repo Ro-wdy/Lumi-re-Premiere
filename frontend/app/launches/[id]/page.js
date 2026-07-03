@@ -7,6 +7,7 @@ import styles from './Details.module.css';
 import { useToast } from '../../ToastContext';
 import TrailerModal from '../../components/TrailerModal';
 import MovieCard from '../../components/MovieCard';
+import { API_BASE_URL } from '../../config';
 
 export default function FilmDetails({ params }) {
   const unwrappedParams = React.use(params);
@@ -23,7 +24,7 @@ export default function FilmDetails({ params }) {
 
     const fetchFilmAndRelated = async () => {
       try {
-        const filmRes = await fetch(`http://localhost:8000/api/films/${filmId}`);
+        const filmRes = await fetch(`${API_BASE_URL}/api/films/${filmId}`);
         if (!filmRes.ok) {
           showToast('Film not found.', 'error');
           setLoading(false);
@@ -33,7 +34,7 @@ export default function FilmDetails({ params }) {
         setFilm(filmData);
 
         // Fetch all to get related films
-        const allRes = await fetch('http://localhost:8000/api/films');
+        const allRes = await fetch(`${API_BASE_URL}/api/films`);
         if (allRes.ok) {
           const allData = await allRes.json();
           // Filter out current film

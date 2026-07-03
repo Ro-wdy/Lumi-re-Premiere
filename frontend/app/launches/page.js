@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Launches.module.css';
 import MovieCard from '../components/MovieCard';
 import { useToast } from '../ToastContext';
+import { API_BASE_URL } from '../config';
 
 export default function Launches() {
   const { showToast } = useToast();
@@ -13,7 +14,7 @@ export default function Launches() {
   useEffect(() => {
     const fetchFilms = async () => {
       try {
-        const res = await fetch('http://localhost:8000/api/films');
+        const res = await fetch(`${API_BASE_URL}/api/films`);
         if (res.ok) {
           const data = await res.json();
           setFilms(data);

@@ -11,6 +11,7 @@ import Accordion from './components/Accordion';
 import Carousel from './components/Carousel';
 import TrailerModal from './components/TrailerModal';
 import MovieCard from './components/MovieCard';
+import { API_BASE_URL } from './config';
 
 export default function Home() {
   const { showToast } = useToast();
@@ -67,8 +68,8 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const [filmsRes, featuredRes] = await Promise.all([
-          fetch('http://localhost:8000/api/films'),
-          fetch('http://localhost:8000/api/films/featured'),
+          fetch(`${API_BASE_URL}/api/films`),
+          fetch(`${API_BASE_URL}/api/films/featured`),
         ]);
 
         if (filmsRes.ok && featuredRes.ok) {

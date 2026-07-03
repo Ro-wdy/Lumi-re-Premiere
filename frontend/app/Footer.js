@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useToast } from './ToastContext';
 import styles from './Footer.module.css';
+import { API_BASE_URL } from './config';
 
 export default function Footer() {
   const { showToast } = useToast();
@@ -19,7 +20,7 @@ export default function Footer() {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/newsletter', {
+      const response = await fetch(`${API_BASE_URL}/api/newsletter`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
