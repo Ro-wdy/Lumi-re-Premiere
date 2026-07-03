@@ -1,0 +1,593 @@
+.page {
+  width: 100%;
+}
+
+.sectionContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Loading skeleton container */
+.loadingContainer {
+  min-height: calc(100vh - 80px);
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10%;
+}
+
+/* 1. Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heroImage {
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.4) 0%,
+    rgba(10, 10, 10, 0.8) 60%,
+    var(--bg-primary) 100%
+  ),
+  linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.9) 0%,
+    rgba(10, 10, 10, 0.5) 50%,
+    rgba(10, 10, 10, 0.2) 100%
+  );
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.badgeWrapper {
+  align-self: flex-start;
+}
+
+.badge {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+}
+
+.subheadline {
+  font-size: 18px;
+  color: var(--text-gray);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.ctas {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.primaryCta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--accent-red);
+  color: var(--text-white);
+  padding: 16px 32px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+}
+
+.primaryCta:hover {
+  background: var(--accent-red-hover);
+  box-shadow: 0 4px 25px rgba(139, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.secondaryCta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryCta:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.scrollText {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--text-gray);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--text-gray), transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollLine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: var(--accent-gold);
+  animation: scrollDown 2s infinite ease-in-out;
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-20px); }
+  50% { transform: translateY(60px); }
+  100% { transform: translateY(-20px); }
+}
+
+/* 2. Countdown Section */
+.countdownSection {
+  background: var(--bg-primary);
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.countdownBox {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 50px 80px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 750px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.countdownTitle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-gray);
+  letter-spacing: 0.15em;
+}
+
+.countdownMovieTitle {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-white);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Section Common Titles */
+.preTitle {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 50px;
+}
+
+/* 3. Featured Movie Spotlight */
+.spotlight {
+  padding: 100px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.spotlightGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.spotlightPoster {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background: var(--bg-secondary);
+}
+
+.spotlightImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spotlightGenre {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  color: var(--accent-gold);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.spotlightDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.spotlightTitle {
+  font-family: var(--font-serif);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-white);
+}
+
+.spotlightLogline {
+  font-size: 18px;
+  color: var(--accent-gold);
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.spotlightSynopsis {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+.spotlightMeta {
+  display: flex;
+  gap: 40px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  margin: 10px 0;
+}
+
+.metaLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.metaValue {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-white);
+}
+
+.spotlightBtns {
+  display: flex;
+  gap: 20px;
+}
+
+.spotlightBtnPrimary {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+  padding: 14px 28px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-gold);
+  transition: all 0.3s ease;
+}
+
+.spotlightBtnPrimary:hover {
+  background: transparent;
+  color: var(--accent-gold);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.spotlightBtnSecondary {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spotlightBtnSecondary:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+/* 4. Upcoming Movie Launches Grid */
+.launches {
+  padding: 100px 0;
+  border-top: 1px solid var(--border-color);
+  background: #0d0d0d;
+}
+
+.launchesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.launchesHeader .sectionTitle {
+  margin-bottom: 0;
+}
+
+.viewAllLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-gold);
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.viewAllLink:hover {
+  color: var(--text-white);
+}
+
+.launchesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* 5. Services Section */
+.services {
+  padding: 100px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.serviceCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 40px 30px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  border-color: var(--glass-border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+.serviceNum {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  color: var(--accent-gold);
+  opacity: 0.4;
+  font-weight: 600;
+}
+
+.serviceTitle {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: 0.01em;
+}
+
+.serviceDesc {
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+/* 6. Stats Section */
+.statsSection {
+  padding: 100px 0;
+  border-top: 1px solid var(--border-color);
+  background: #0d0d0d;
+}
+
+/* 7. Testimonials Carousel */
+.testimonials {
+  padding: 100px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.testimonials .sectionTitle {
+  text-align: center;
+}
+
+/* 8. FAQ Accordion */
+.faq {
+  padding: 100px 0;
+  border-top: 1px solid var(--border-color);
+  background: #0d0d0d;
+}
+
+.faqHeader {
+  text-align: center;
+}
+
+.faqAccordionWrapper {
+  max-width: 800px;
+  margin: 50px auto 0 auto;
+}
+
+/* Responsive Rules */
+@media (max-width: 992px) {
+  .headline {
+    font-size: 48px;
+  }
+  .spotlightGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .spotlightPoster {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .launchesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 0 24px;
+  }
+  .countdownBox {
+    padding: 30px;
+  }
+  .sectionTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headline {
+    font-size: 36px;
+  }
+  .subheadline {
+    font-size: 15px;
+  }
+  .ctas {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .countdownMovieTitle {
+    font-size: 24px;
+  }
+  .launchesGrid {
+    grid-template-columns: 1fr;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .spotlightTitle {
+    font-size: 32px;
+  }
+  .spotlightMeta {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sectionContainer {
+    padding: 0 24px;
+  }
+}

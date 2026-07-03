@@ -1,0 +1,320 @@
+.companyPage {
+  background: var(--bg-primary);
+  padding: 80px 0 100px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header styling */
+.header {
+  max-width: 700px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.preTitle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-gold);
+  letter-spacing: 0.2em;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.15;
+}
+
+.description {
+  font-size: 16px;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  color: var(--text-white);
+  margin-bottom: 40px;
+}
+
+/* Story Section */
+.storySection {
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+}
+
+.storyText {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.storyStats {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.storyStatItem {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 6px;
+}
+
+.statYear {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.statDesc {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+/* Services section */
+.servicesSection {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.serviceCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover {
+  border-color: var(--glass-border);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.serviceName {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--text-white);
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+
+/* Timeline section */
+.timelineSection {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-gold) 0%, var(--border-color) 100%);
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+}
+
+.timelineYear {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.timelineDot {
+  position: absolute;
+  top: 4px;
+  left: -30px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  border: 2px solid var(--bg-primary);
+  z-index: 2;
+  box-shadow: 0 0 8px var(--accent-gold);
+}
+
+.timelineTitle {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--text-white);
+  margin-bottom: 10px;
+}
+
+.timelineDesc {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+/* Values section */
+.valuesSection {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.valueCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 30px 24px;
+  border-radius: 6px;
+}
+
+.valueTitle {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--accent-gold);
+  margin-bottom: 12px;
+}
+
+.valueDesc {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+/* Team section */
+.teamSection {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.teamCard {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 40px 30px;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.teamAvatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--glass-border);
+  color: var(--accent-gold);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamName {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--text-white);
+}
+
+.teamRole {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+/* Testimonials */
+.testimonialsSection {
+  padding-top: 80px;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .header {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,352 @@
+.detailsPage {
+  background: var(--bg-primary);
+  min-height: calc(100vh - 80px);
+  padding-bottom: 100px;
+}
+
+.loadingContainer {
+  min-height: calc(100vh - 80px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.notFoundContainer {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+.notFoundTitle {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  color: var(--accent-gold);
+}
+
+.notFoundDesc {
+  color: var(--text-gray);
+  max-width: 400px;
+}
+
+.backBtn {
+  font-family: var(--font-sans);
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  background: var(--accent-gold);
+  color: var(--bg-primary);
+}
+
+/* Hero Backdrop */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.heroBg {
+  object-fit: cover;
+  opacity: 0.25;
+  filter: blur(8px) scale(1.05);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4) 0%, var(--bg-primary) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 40px 0 40px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.backLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-gray);
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--accent-gold);
+}
+
+/* Main Info block */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  margin-top: -160px;
+  z-index: 3;
+}
+
+.mainInfo {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.posterCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.posterCard {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  background: var(--bg-secondary);
+}
+
+.posterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trailerBtn {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--accent-red);
+  color: var(--text-white);
+  border: none;
+  padding: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+}
+
+.trailerBtn:hover {
+  background: var(--accent-red-hover);
+  box-shadow: 0 4px 25px rgba(139, 0, 0, 0.5);
+}
+
+/* Text Detail column styling */
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.genre {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  letter-spacing: 0.15em;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-white);
+}
+
+.logline {
+  font-size: 20px;
+  color: var(--accent-gold);
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 24px 0;
+  margin: 10px 0;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.metaLabel {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-white);
+}
+
+.subTitle {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.synopsisWrapper,
+.castWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.synopsis {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+.castList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.castItem {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  color: var(--text-white);
+  font-weight: 400;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Section styling */
+.gallerySection,
+.relatedSection {
+  border-top: 1px solid var(--border-color);
+  padding-top: 60px;
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  color: var(--text-white);
+  margin-bottom: 40px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.galleryCard {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  aspect-ratio: 16 / 9;
+  background: var(--bg-secondary);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.galleryCard:hover .galleryImage {
+  transform: scale(1.03);
+}
+
+/* Related movies styling */
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .mainInfo {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .posterCol {
+    max-width: 380px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .hero {
+    height: 280px;
+  }
+  .container {
+    margin-top: -100px;
+  }
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 32px;
+  }
+  .metaGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .heroContent {
+    padding: 24px 24px 0 24px;
+  }
+}
