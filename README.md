@@ -26,46 +26,12 @@ This repository hosts the **Next.js Frontend application**. The containerized La
 
 ---
 
-## 🚀 Getting Started
 
-### Prerequisites
-* Node.js >= 18.0.0
-* npm / yarn / pnpm
-
-### Run Locally
-
-1. **Navigate to the frontend folder**:
-   ```bash
-   cd frontend
-   ```
-
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables**:
-   Create a `.env.local` file inside the `frontend` folder:
-   ```env
-   NEXT_PUBLIC_API_URL=http://localhost:8000
-   ```
-   *Note: In production, point this to your deployed Render URL.*
-
-4. **Run Dev Server**:
+**Run Dev Server**:
    ```bash
    npm run dev
    ```
-   The site will be running at `http://localhost:3000`.
+ 
 
----
 
-## 🌐 Production Deployment
 
-This project is configured for seamless deployment on **Vercel**:
-
-1. Connect the GitHub repository to your Vercel Account.
-2. Set the **Root Directory** in Vercel to `frontend`.
-3. Add the following Environment Variable:
-   * **Key**: `NEXT_PUBLIC_API_URL`
-   * **Value**: Your live API backend URL (e.g. `https://lumiere-backend-acxr.onrender.com`)
-4. Deploy the project.
